@@ -13,6 +13,7 @@ class _HomePageState extends State<HomePage> implements ProductListView{
 
   ProductPresenter _productPresenter;
   List<Product> _productList = [];
+  bool _isLoading = false;
 
   final List<MaterialColor> _colors = [Colors.blue, Colors.indigo, Colors.red];
 
@@ -23,6 +24,7 @@ class _HomePageState extends State<HomePage> implements ProductListView{
   @override
   void initState() {
     super.initState();
+    this._isLoading = true;
     this._productPresenter.loadProducts();
   }
 
@@ -34,7 +36,11 @@ class _HomePageState extends State<HomePage> implements ProductListView{
         title: new Text("Control de Productos"),
         elevation: defaultTargetPlatform == TargetPlatform.iOS ? 0.0: 5.0,
       ),
-      body: _productsWidget(),
+      body: _isLoading ?
+            new Center(
+              child: new CircularProgressIndicator(),
+            )
+            :_productsWidget(),
 
     );
 
@@ -73,6 +79,7 @@ class _HomePageState extends State<HomePage> implements ProductListView{
   void onLoadProductComplete(List<Product> items) {
     setState(() {
       this._productList = items;
+      this._isLoading = false;
     });
   }
 
