@@ -1,13 +1,8 @@
-import 'package:product_control/dependency_injection.dart';
-import 'package:product_control/entities/product.dart';
+
+
+import 'package:product_control/di/dependency_injection.dart';
 import 'package:product_control/repositories/product_repository.dart';
-
-abstract class ProductListView{
-
-  void onLoadProductComplete(List<Product> productList);
-  void onLoadProductError();
-
-}
+import 'package:product_control/view/product_list_view.dart';
 
 
 class ProductPresenter{

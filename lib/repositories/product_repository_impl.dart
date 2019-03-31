@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:product_control/entities/product.dart';
 import 'package:product_control/repositories/product_repository.dart';
 

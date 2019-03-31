@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:product_control/dependency_injection.dart';
-import 'package:product_control/home_page.dart';
+import 'package:product_control/di/dependency_injection.dart';
+import 'package:product_control/view/home_page.dart';
 
 // ignore: argument_type_not_assignable
 void main() async{
