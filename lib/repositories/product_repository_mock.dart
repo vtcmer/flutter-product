@@ -10,12 +10,8 @@ class ProductRepositoryMock implements ProductRepository{
   Future<List<Product>> fetchProduct() {
     List<Product> productList = [];
 
-    productList.add(Product(1,"Carne"));
-    productList.add(Product(2,"Pescado"));
-    productList.add(Product(3,"Leche"));
-    productList.add(Product(4,"Congelados"));
 
-    for (int i = 5; i < 50; i++){
+    for (int i = 1; i < 50; i++){
       productList.add(Product(i,"Alimento${i}"));
     }
 

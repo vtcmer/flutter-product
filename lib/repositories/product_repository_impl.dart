@@ -13,10 +13,10 @@ class ProductRepositoryImpl implements ProductRepository{
 
     List<Product> productList = [];
 
-    productList.add(Product(1,"Carne REST"));
-    productList.add(Product(2,"Pescado REST"));
-    productList.add(Product(3,"Leche REST"));
-    productList.add(Product(4,"Congelados REST"));
+    productList.add(Product(1,"Carne"));
+    productList.add(Product(2,"Pescado"));
+    productList.add(Product(3,"Leche"));
+    productList.add(Product(4,"Congelados"));
 
     return new Future.value(productList) ;
   }

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:product_control/di/dependency_injection.dart';
 import 'package:product_control/view/home_page.dart';
 
-// ignore: argument_type_not_assignable
+
 void main() async{
-  Injector.configure(Flavor.MOCK);
+  Injector.configure(Environment.PROD);
   runApp(new MyApp());
 }
 
